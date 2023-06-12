@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Bite Express App
+# Flask.py Boilerplate
 
 
-__author__ = "PhoenixITng"
-__copyright__ = "Copyright 2023 - datetime.utcnow().year, {}".format(__author__)
+__author__ = "OTechCup"
+__copyright__ = f"Copyright 2023 - datetime.utcnow().year, {__author__}"
 __credits__ = ["Mr. O"]
-__version__ = "os.environ.get('BITE_EXPRESS_VERSION')"
+__version__ = "config('FLASK_PY_VERSION', cast=float)"
 __maintainer__ = __author__
-__email__ = "support@bitexpress.ng"
-__status__ = "os.environ.get('BITE_EXPRESS_ENVIRONMENT_STATUS')"
+__email__ = "support@exfac.info"
+__status__ = "config('FLASK_PY_ENVIRONMENT_STATUS', cast=str)"
 
 
 # import modules
