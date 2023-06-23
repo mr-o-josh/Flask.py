@@ -35,12 +35,10 @@ login_manager = LoginManager()
 mail = Mail()
 moment = Moment()
 
-
 login_manager.login_view = "auth.sign_in"
 login_manager.login_message_category = "info"
 
 pymysql.install_as_MySQLdb()
-
 
 # rest api boilerplate
 jwt_manager = JWTManager()
@@ -77,7 +75,6 @@ def create_flask_py_app(config):
 
     # register blueprints
     flask_py_app.register_blueprint(auth)
-    
     
     # rest api boilerplate
     api.init_app(flask_py_app)

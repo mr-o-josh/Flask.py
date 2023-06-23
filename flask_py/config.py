@@ -46,8 +46,7 @@ class Config:
 
 
 class DevConfig(Config):
-    @staticmethod
-    def db_uri(connection_type):
+    def db_uri(connection_type: str) -> str:
         if connection_type == "ssh_tunnel":
             # remote db server (rds) ssh tunnel
             rds_ssh_tunnel = sshtunnel.SSHTunnelForwarder(
@@ -84,7 +83,7 @@ class DevConfig(Config):
     DEBUG = True
     
     # db
-    SQLALCHEMY_DATABASE_URI = db_uri()
+    SQLALCHEMY_DATABASE_URI = db_uri("sqlite")
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_ECHO = True
 
