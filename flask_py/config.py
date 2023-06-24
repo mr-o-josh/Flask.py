@@ -112,7 +112,7 @@ class ProdConfig(Config):
         },
         'pool_pre_ping': True,
         'pool_size' : 100,
-        'pool_recycle': 3600, # 1 hour 300
+        'pool_recycle': 3600,  # 1 hour 300
     }
 
 
