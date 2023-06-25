@@ -21,7 +21,7 @@ from flask_py import db
 class Exfacer(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     exfac_id = db.Column(db.String(14), unique=True, nullable=False)
-    firstname = db.Column(db.String(100), nullable=False)
+    first_name = db.Column(db.String(100), nullable=False)
 
 
     def __repr__(self):
