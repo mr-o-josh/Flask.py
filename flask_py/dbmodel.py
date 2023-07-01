@@ -14,6 +14,7 @@ __status__ = "config('FLASK_PY_ENVIRONMENT_STATUS', cast=str)"
 
 # import modules
 from flask_login import UserMixin
+from sqlalchemy.orm import validates
 
 from flask_py import db
 
@@ -40,6 +41,13 @@ class Exfacer(db.Model, UserMixin):
     @classmethod
     def get_by_exfac_id(cls, exfac_id):
         return cls.query.filter_by(exfac_id=exfac_id).first()
+    
+    
+    @validates("email_address")
+    def validate_email(self, email_address):
+        assert "@" in email_address, "Invalid email address"
+        
+        return email_address
     
     
     def add(self):
