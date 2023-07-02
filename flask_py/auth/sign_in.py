@@ -18,13 +18,13 @@ from flask_restx import Resource
 from .routes import auth
 
 
-@auth.route("/sign-in", methods=["POST"])
+@auth.route("/auth/sign-in", methods=["POST"])
 def sign_in():
     pass
     
     
 # rest api boilerplate
-@auth.route("/sign-in", methods=["POST"])
+@auth.route("/auth/sign-in", methods=["POST"])
 class SignIn(Resource):
     def post(self):
         """
